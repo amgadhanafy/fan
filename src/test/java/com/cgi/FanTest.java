@@ -1,6 +1,7 @@
 package com.cgi;
 
 import static com.cgi.Direction.*;
+import static com.cgi.Fan.OFF;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -23,7 +24,7 @@ class FanTest {
 	@Test
 	void testSpeedUp() {
 		assertEquals(FORWARD, fan.getDirection());
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		
 		fan.speedUp();
 		assertEquals(1, fan.getSpeed());
@@ -39,17 +40,17 @@ class FanTest {
 		assertEquals(FORWARD, fan.getDirection());
 		
 		fan.speedUp();
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		assertEquals(FORWARD, fan.getDirection());
 	}
 
 	@Test
 	void testReverseSpeedupDirection() {
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		assertEquals(FORWARD, fan.getDirection());
 		
 		fan.reverseDirection();
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		assertEquals(BACKWARD, fan.getDirection());
 		
 		fan.speedUp();
@@ -77,22 +78,22 @@ class FanTest {
 		assertEquals(FORWARD, fan.getDirection());
 		
 		fan.speedUp();
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		assertEquals(FORWARD, fan.getDirection());
 		
 		fan.reverseDirection();
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		assertEquals(BACKWARD, fan.getDirection());
 		
 	}
 	@Test
 	void testReverseDirection() {
 		assertEquals(FORWARD, fan.getDirection());
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		
 		fan.reverseDirection();
 		assertEquals(BACKWARD, fan.getDirection());
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		
 		fan.speedUp();
 		assertEquals(1, fan.getSpeed());
@@ -107,7 +108,7 @@ class FanTest {
 		assertEquals(BACKWARD, fan.getDirection());
 		
 		fan.speedUp();
-		assertEquals(0, fan.getSpeed());
+		assertEquals(OFF, fan.getSpeed());
 		assertEquals(BACKWARD, fan.getDirection());
 	}
 
