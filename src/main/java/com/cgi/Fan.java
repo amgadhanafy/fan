@@ -3,12 +3,21 @@ package com.cgi;
 import static com.cgi.Direction.BACKWARD;
 import static com.cgi.Direction.FORWARD;
 
-import lombok.Getter;
-
-@Getter
 public class Fan {
+	public static int getOff() {
+		return OFF;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public Direction getDirection() {
+		return direction;
+	}
+
 	public static final int OFF = 0;
-	
+
 	private int speed = OFF;
 	private Direction direction = FORWARD;
 
