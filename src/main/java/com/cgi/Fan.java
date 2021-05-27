@@ -4,6 +4,11 @@ import static com.cgi.Direction.BACKWARD;
 import static com.cgi.Direction.FORWARD;
 
 public class Fan {
+	public static final int OFF = 0;
+
+	private int speed = OFF;
+
+	private Direction direction = FORWARD;
 
 	public int getSpeed() {
 		return speed;
@@ -12,11 +17,6 @@ public class Fan {
 	public Direction getDirection() {
 		return direction;
 	}
-
-	public static final int OFF = 0;
-
-	private int speed = OFF;
-	private Direction direction = FORWARD;
 
 	public void speedUp() {
 		if (speed == 3) {
