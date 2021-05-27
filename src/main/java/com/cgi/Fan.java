@@ -4,9 +4,6 @@ import static com.cgi.Direction.BACKWARD;
 import static com.cgi.Direction.FORWARD;
 
 public class Fan {
-	public static int getOff() {
-		return OFF;
-	}
 
 	public int getSpeed() {
 		return speed;
